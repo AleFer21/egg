@@ -1,24 +1,12 @@
 package libreria.entidades;
 
-import java.io.Serializable;
-import javax.persistence.*;
-
-@Entity
-public class Autor implements Serializable {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+public class Autor {
+    
     private Integer id;
-
     private String nombre;
     private Boolean alta;
 
     public Autor() {
-    }
-
-    public Autor(String nombre, Boolean alta) {
-        this.nombre = nombre;
-        this.alta = alta;
     }
 
     public Autor(Integer id, String nombre, Boolean alta) {
@@ -27,7 +15,7 @@ public class Autor implements Serializable {
         this.alta = alta;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -43,7 +31,7 @@ public class Autor implements Serializable {
         this.nombre = nombre;
     }
 
-    public boolean isAlta() {
+    public Boolean getAlta() {
         return alta;
     }
 
@@ -55,5 +43,5 @@ public class Autor implements Serializable {
     public String toString() {
         return "Autor{" + "id=" + id + ", nombre=" + nombre + ", alta=" + alta + '}';
     }
-
+    
 }
