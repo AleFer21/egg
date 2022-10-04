@@ -4,7 +4,7 @@ import java.util.List;
 import libreria.entidades.Libro;
 
 public class LibroDAO extends DAO<Libro> {
-    
+
     @Override
     public void guardar(Libro libro) {
         super.guardar(libro);

@@ -86,11 +86,11 @@ public class LibroServicio {
             return false;
         }
     }
-    
-    public void imprimirLibros(){
+
+    public void imprimirLibros() {
         try {
             List<Libro> libros = listarLibros();
-            if(libros.isEmpty()) {
+            if (libros.isEmpty()) {
                 throw new Exception("No existen libros en la base de datos.");
             } else {
                 for (Libro l : libros) {
