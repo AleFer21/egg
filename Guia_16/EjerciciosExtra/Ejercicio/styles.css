@@ -1,0 +1,29 @@
+table, tr, th, td
+{
+    border: 1px solid;
+    border-color: #333;
+    border-collapse: collapse;
+    padding: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+th.vertical
+{
+    text-align: left;
+    background-color: #E6F3FF;
+}
+
+th.horizontal
+{
+    background-color: lightgrey;
+}
+
+table tr:nth-child(odd) td
+{
+    background:#FFF;
+}
+table tr:nth-child(even) td
+{
+    background:#FFFFCC;
+}

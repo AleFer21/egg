@@ -33,6 +33,24 @@ public class LibroServicio {
     public Libro crearLibro(String titulo, int anio, int ejemplares, int ejemplaresPrestados, int ejemplaresRestantes, Autor autor, Editorial editorial) {
         Libro libro = new Libro();
         try {
+            if(titulo == null || titulo.trim().isEmpty()) {
+                throw new Exception("Debe ingresar el titulo.");
+            }
+            if(anio < 0) {
+                throw new Exception("Debe ingresar el año.");
+            }
+            if(ejemplares < 0) {
+                throw new Exception("Debe ingresar la cantidad de ejemplares.");
+            }
+            if(ejemplaresPrestados < 0) {
+                throw new Exception("Debe ingresar la cantidad de ejemplares prestados.");
+            }
+            if(autor == null) {
+                throw new Exception("Debe ingresar el autor.");
+            }
+            if(editorial == null) {
+                throw new Exception("Debe ingresar la editorial.");
+            }
             libro.setTitulo(titulo);
             libro.setAnio(anio);
             libro.setEjemplares(ejemplares);
@@ -71,6 +89,15 @@ public class LibroServicio {
     public Libro buscarLibroPorAutor(String autor) {
         try {
             return dao.buscarLibroPorAutor(autor);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return null;
+        }
+    }
+    
+    public Libro buscarLibroPorEditorial(String editorial) {
+        try {
+            return dao.buscarLibroPorEditorial(editorial);
         } catch (Exception e) {
             System.out.println(e.getMessage());
             return null;

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head th:replace= "/fragments/head :: head"></head>
+    <body>
+        <nav th:replace="/fragments/navbar :: nav"></nav>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Noticia</th>
+                    <th scope="col">Ver</th>
+                </tr>
+            </thead>
+            <tbody th:each="noticia : ${noticias}">
+                <tr>
+                    <th scope="row"><img th:src="@{/imagen/imgNoticia/__${noticia.imagen.id}__}" alt="bover"/></th>
+                    <td th:text="${noticia.titulo}"></td>
+                    <td>
+                        <a class="btn btn-primary" th:href="@{/eggnews/vistaNoticia/__${noticia.id}__}" role="button">Ver Noticia</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </body>
+</html>

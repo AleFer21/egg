@@ -22,7 +22,7 @@ public class LibroDAO extends DAO<Libro> {
         return libros;
     }
 
-    public Libro buscarLibroPorIsbn(int id) throws Exception {
+    public Libro buscarLibroPorIsbn(long id) throws Exception {
         conectar();
         Libro libro = em.find(Libro.class, id);
         desconectar();
@@ -38,14 +38,14 @@ public class LibroDAO extends DAO<Libro> {
 
     public Libro buscarLibroPorAutor(String autor) throws Exception {
         conectar();
-        Libro libro = (Libro) em.createQuery("SELECT l FROM Libro l, IN(l.autor) a WHERE a.nombre LIKE :autor").setParameter("autor", autor).getSingleResult();
+        Libro libro = (Libro) em.createQuery("SELECT l FROM Libro l WHERE l.autor.nombre LIKE :autor").setParameter("autor", autor).getSingleResult();
         desconectar();
         return libro;
     }
 
     public Libro buscarLibroPorEditorial(String editorial) throws Exception {
         conectar();
-        Libro libro = (Libro) em.createQuery("SELECT l FROM Libro l, IN(l.editorial) a WHERE a.nombre LIKE :editorial").setParameter("editorial", editorial).getSingleResult();
+        Libro libro = (Libro) em.createQuery("SELECT l FROM Libro l WHERE l.editorial.nombre LIKE :editorial").setParameter("editorial", editorial).getSingleResult();
         desconectar();
         return libro;
     }

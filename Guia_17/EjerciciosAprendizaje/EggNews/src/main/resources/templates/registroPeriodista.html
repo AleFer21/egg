@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head th:replace= "/fragments/head :: head">
+        <title>Registro Periodista</title>
+    </head>
+    <body>
+        <nav th:replace="/fragments/navbar :: nav"></nav>
+        <h3>Bienvenido Dios</h3>
+        <h4>Registrar Periodista</h4>
+        <div class="container-fluid m-5 contenedor">
+            <form class="formulario" th:action="@{/admin/registroPeriodista}" method="POST">
+                <div class="mb-3">
+                    <label for="nombreUsuario" class="form-label">Nombre de Usuario</label>
+                    <input type="text" class="form-control" name="nombreUsuario" placeholder="Elija un nombre de periodista">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" name="password" placeholder="Ingrese una contraseña de 6 o mas digitos">
+                </div>
+                <div class="mb-3">
+                    <label for="sueldoMensual" class="form-label">Sueldo Mensual</label>
+                    <input type="number" class="form-control" name="sueldoMensual" placeholder="Asignar sueldo">
+                </div>
+                <div class="col-12">
+                    <button class="btn btn-primary" type="submit">Registrar Periodista</button>
+                </div>
+            </form>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </body>
+</html>

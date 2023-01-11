@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registrar un usuario</title>
+  </head>
+  <body>
+    <h1>Registrar un usuario</h1>
+    <form action="/registro" method="POST" enctype="multipart/form-data">
+      <label for="nombre">Nombre del usuario</label><br />
+      <input name="nombre" type="text" required /><br />
+      <label for="password">Contraseña del usuario</label><br />
+      <input name="password" type="password" required /><br />
+      <label for="edad">Edad del usuario</label><br />
+      <input name="edad" type="number" required /><br />
+      <label for="fecha">Fecha de nacimiento del usuario</label><br />
+      <input name="fecha" type="date" required /><br />
+      <label>Sexo del usuario</label><br />
+      <input name="sexo" type="radio" />Hombre<br />
+      <input name="sexo" type="radio" />Mujer<br />
+      <input name="sexo" type="radio" />Prefiero no decir<br />
+      <label>Pais de nacimiento</label><br />
+      <select>
+        <option value="arg">Argentina</option>
+        <option value="br">Brasil</option>
+        <option value="ch">Chile</option>
+        <option value="py">Paraguay</option>
+        <option value="uy">Uruguay</option>
+      </select>
+      <br>
+      <button type="submit">Enviar</button>
+      <button type="reseet">Borrar</button>
+    </form>
+  </body>
+</html>

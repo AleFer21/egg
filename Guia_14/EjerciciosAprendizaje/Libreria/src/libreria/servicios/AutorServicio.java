@@ -5,7 +5,7 @@ import libreria.entidades.Autor;
 import libreria.persistencia.AutorDAO;
 
 public class AutorServicio {
-    
+
     private EditorialServicio editorialServicio;
     private LibroServicio libroServicio;
     private final AutorDAO dao;
@@ -31,6 +31,9 @@ public class AutorServicio {
     public Autor crearAutor(String nombre) {
         Autor autor = new Autor();
         try {
+            if (nombre == null || nombre.trim().isEmpty()) {
+                throw new Exception("Ingrese el nombre del autor.");
+            }
             autor.setNombre(nombre);
             autor.setAlta(Boolean.TRUE);
             dao.guardar(autor);
@@ -68,5 +71,5 @@ public class AutorServicio {
             return false;
         }
     }
-    
+
 }

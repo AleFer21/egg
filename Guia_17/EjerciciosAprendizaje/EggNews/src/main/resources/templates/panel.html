@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head th:replace= "/fragments/head :: head">
+        <title>Panel</title>
+    </head>
+    <body>
+        <nav th:replace="/fragments/navbar :: nav"></nav>
+        <h3>Bienvenido Dios</h3>
+        <h4>Registrar Periodista</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Id</th>
+                    <th scope="col">Periodista</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody th:each="periodista : ${periodistas}">
+                <tr>
+                    <th scope="row" th:text="${periodista.id}"></th>
+                    <td th:text="${periodista.nombreUsuario}"></td>
+                    <td>
+                        <a class="btn btn-primary" th:href="@{/admin/modificarSueldo/__${periodista.id}__}" role="button" >Actualizar sueldo</a>
+                    </td>
+                    <td>
+                        <a class="btn btn-primary" th:href="@{/admin/darBaja/__${periodista.id}__}" role="button">Dar de baja</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </body>
+</html>

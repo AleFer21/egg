@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+    <head th:replace= "/fragments/head :: head"></head>
+    <body>
+        <div class="headLine">
+            <h1>Bienvenidos a Egg News</h1>
+        </div>
+        <div class="lema">
+            <p>Registrate o inicia sesion para mantenerte al dia con todas las noticias mundiales.</p>
+        </div>
+        <a class="btn btn-primary" th:href="@{/login}" role="button">Iniciar Sesion</a><br>
+        <a class="btn btn-warning" th:href="@{/registro}" role="button">Registrarse</a>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    </body>
+</html>

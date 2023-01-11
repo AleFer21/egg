@@ -1,0 +1,23 @@
+.v1 ul li
+{
+    list-style: none;
+}
+
+.v2 ul li
+{
+    list-style: none;
+}
+
+.v2 ul li::before
+{
+    content: "☺";
+    color: blue;
+	display: inline-block;
+	width: 1em;
+	margin-left: -1em
+}
+
+.enlaces ul li
+{
+    list-style: none;
+}

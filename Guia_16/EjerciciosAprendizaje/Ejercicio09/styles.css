@@ -1,0 +1,78 @@
+#titulo
+{
+    color: darkcyan;
+}
+
+strong
+{
+    color: red;
+}
+
+.destacado
+{
+    color: goldenrod;
+}
+
+#subtitulo
+{
+    color: blue;
+}
+
+a
+{
+    color: red;
+}
+
+a em
+{
+    color: blue;
+}
+
+span.especial
+{
+    color: blueviolet;
+}
+
+table, td, tr, th
+{
+    border: 1px solid;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+th
+{
+    color: red;
+    border-color: black;
+}
+
+th.especial
+{
+    color: goldenrod;
+    border-color: black;
+}
+
+td
+{
+    color: green;
+    border-color: black;
+}
+
+td strong
+{
+    color: goldenrod;
+}
+
+div p
+{
+    color: olive;
+}
+
+p #especial
+{
+    color: palevioletred;
+}
+
+div p a{
+    color: green;
+}

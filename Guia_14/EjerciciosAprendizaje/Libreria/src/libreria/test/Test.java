@@ -11,18 +11,27 @@ public class Test {
     public static void main(String[] args) {
         
         final AutorServicio autorServicio = new AutorServicio();
-        Autor autor = autorServicio.crearAutor("J.R.R. Tolkien");
+//        Autor autor = autorServicio.crearAutor("Ludwig von Mises");
         
         final EditorialServicio editorialServicio = new EditorialServicio();
-        Editorial editorial = editorialServicio.crearEditorial("Minotauro");
+//        Editorial editorial = editorialServicio.crearEditorial("Union");
         
         LibroServicio libroServicio = new LibroServicio();
-        String nombre = "El Señor de los Anillos";
-        int anio = 1954;
-        int ejemplares = 37;
-        int ejemplaresPrestados = 15;
-        int ejemplaresRestantes = ejemplares - ejemplaresPrestados;
-        libroServicio.crearLibro(nombre, anio, ejemplares, ejemplaresPrestados, ejemplaresRestantes, autor, editorial);
+//        String nombre = "La accion humana";
+//        int anio = 1949;
+//        int ejemplares = 50;
+//        int ejemplaresPrestados = 43;
+//        int ejemplaresRestantes = ejemplares - ejemplaresPrestados;
+//        libroServicio.crearLibro(nombre, anio, ejemplares, ejemplaresPrestados, ejemplaresRestantes, autor, editorial);
+
+//        System.out.println(libroServicio.buscarLibroPorAutor("Ernesto Sabato"));
+//        System.out.println(libroServicio.buscarLibroPorEditorial("Union"));
+//        System.out.println(libroServicio.buscarLibroPorIsbn(2));
+
+        libroServicio.imprimirLibros();
+//        libroServicio.eliminarLibroPorIsbn(4);
+        System.out.println("");
+        libroServicio.imprimirLibros();
         
     }
     

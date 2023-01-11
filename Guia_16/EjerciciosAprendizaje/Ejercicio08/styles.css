@@ -1,0 +1,14 @@
+.link
+{
+    color: #CC0000;
+}
+
+.link:hover
+{
+    background-color: #CC0000;
+    color: #fff;
+}
+
+.link:visited{
+    color: lightgrey;
+}

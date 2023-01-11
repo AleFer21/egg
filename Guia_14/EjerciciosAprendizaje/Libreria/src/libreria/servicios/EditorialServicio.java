@@ -31,6 +31,9 @@ public class EditorialServicio {
     public Editorial crearEditorial(String nombre) {
         Editorial editorial = new Editorial();
         try {
+            if (nombre == null || nombre.trim().isEmpty()) {
+                throw new Exception("Ingrese el nombre de la editorial.");
+            }
             editorial.setNombre(nombre);
             editorial.setAlta(Boolean.TRUE);
             dao.guardar(editorial);
